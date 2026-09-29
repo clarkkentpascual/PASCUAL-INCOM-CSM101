@@ -1,0 +1,33 @@
+stuname = input("ENTER THE STUDENT'S NAME: ")
+
+CD = {
+    "676767": {"NAME": "CHARLES", "GRADE": [90, 85, 86, 82, 83, 90, 92]},
+    "111111": {"NAME": "JADE", "GRADE": [71, 30, 61, 67, 67, 67, 69]},
+}
+
+found = False
+
+for SD, info in CD.items():
+    if info["NAME"].upper() == stuname.upper():
+        grades = info["GRADE"]
+
+        avg = sum(grades) / len(grades)
+        low = min(grades)
+        high = max(grades)
+
+        print(f"STUDENT-ID = {SD}")
+        print(f"GRADES = {grades}")
+        print(f"AVERAGE GRADE = {avg:.2f}")
+        print(f"LOWEST GRADE = {low}")
+        print(f"HIGHEST GRADE = {high}")
+
+        for gelamat in grades:
+            if gelamat < 60:
+
+                print(f"{SD} HAS A GRADE BELOW 60! CANDIDATE FOR INTERVENTION!")
+
+        found = True
+        break
+
+if not found:
+    print("INVALID STUDENT, TRY AGAIN!!!")
