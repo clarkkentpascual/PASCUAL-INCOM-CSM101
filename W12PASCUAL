@@ -1,0 +1,14 @@
+patient = {"ANA": [130, 120, 150], "BEN": [70, 90, 300], "CHIU": [120, 110, 85, 150]}
+yes = 0
+no = 0
+for name , reading in patient.items():
+    print("\npatient: ", name)
+    for item in reading:
+        if item > 120:
+            print(f"{item}: HIGH!")
+            yes = yes + 1
+            no = item
+        else:
+            print(f"{item}: NORMAL!")
+    print(f"HIGH READINGS = {no}")
+    print(f"NUMBERS OF HIGH READINGS = {yes}")
