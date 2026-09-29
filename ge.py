@@ -1,0 +1,27 @@
+yes = input("TYPE YOUR NAME: ") .upper()
+no = input("TYPE YOUR JOB POSITION = JANITOR, CLERK, CASHIER OR MANAGER: ") .upper()
+maybe = int(input("TYPE HOURS WORKED: "))
+JANITOR = 18000
+CLERK = 22000
+CASHIER = 24000
+MANAGER = 40000
+TOTAL = 88
+JANITORHALFMONTHSALARY = JANITOR / 2
+CLERKHALFMONTHSALARY = CLERK / 2
+CASHIERHALFMONTHSALARY = CASHIER / 2
+MANAGERHALFMONTHSALARY = MANAGER / 2
+ABSENT = 88 - maybe
+OVERTIME = maybe - 88
+halfmonth = JANITOR / 2
+match JOB:
+    case "JANITOR":
+        hourlyrate = halfmonth / 88
+        if maybe <88:
+        ABSENTDED = ABSENT * maybe
+        OVERTIMEHOURS =  0
+        OVERTIMEPAY = 0
+        OVERTIMERATE = hourlyrate * 1.25
+        OVERTIMEPAY = OVERTIMEHOURS * OVERTIMERATE
+
+
+

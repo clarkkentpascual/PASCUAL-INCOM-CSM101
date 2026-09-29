@@ -1,0 +1,10 @@
+Fruits  = ["APPLE", "ORANGE", "CHERRY"]
+print(Fruits[0])
+Fruits.append("BANANA")
+print(Fruits)
+Fruits.insert(1, "PINEAPPLE")
+print(Fruits)
+Fruits.remove("ORANGE")
+print(Fruits)
+Fruits.pop(2)
+print(Fruits)
